@@ -87,11 +87,11 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/Pocky/Documents/Projy/QuarterONions/./libs/glfw/include"
+					"path" : "C:/Users/pierr/Documents/GitHub/QuarterONions/./libs/glfw/include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/Pocky/Documents/Projy/QuarterONions/./libs/glew/include"
+					"path" : "C:/Users/pierr/Documents/GitHub/QuarterONions/./libs/glew/include"
 				}
 			],
 			"language" : "CXX",
@@ -127,17 +127,17 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-LC:\\Users\\Pocky\\Documents\\Projy\\QuarterONions\\opengl32",
+				"fragment" : "-LC:\\Users\\pierr\\Documents\\GitHub\\QuarterONions\\opengl32",
 				"role" : "libraryPath"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-LC:\\Users\\Pocky\\Documents\\Projy\\QuarterONions\\.\\libs\\glfw\\lib-static-ucrt",
+				"fragment" : "-LC:\\Users\\pierr\\Documents\\GitHub\\QuarterONions\\.\\libs\\glfw\\lib-static-ucrt",
 				"role" : "libraryPath"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-LC:\\Users\\Pocky\\Documents\\Projy\\QuarterONions\\.\\libs\\glew\\lib\\Release\\x64",
+				"fragment" : "-LC:\\Users\\pierr\\Documents\\GitHub\\QuarterONions\\.\\libs\\glew\\lib\\Release\\x64",
 				"role" : "libraryPath"
 			},
 			{

@@ -52,7 +52,7 @@ void Quateronion::operator+=(const Quateronion & q) {
  * @param value
  * @return
  */
-Quateronion Quateronion::operator+(const Quateronion & value) {
+Quateronion Quateronion::operator+(const Quateronion & value) const {
     float scalar = this->scalar + value.scalar;
     Vector3 vect = Vector3(this->vector.x + value.vector.x,
                            this->vector.y + value.vector.y,
@@ -77,7 +77,7 @@ void Quateronion::operator-=(const Quateronion & value) {
  * @param value
  * @return
  */
-Quateronion Quateronion::operator-(const Quateronion &value) {
+Quateronion Quateronion::operator-(const Quateronion &value) const {
     float scalar= this->scalar - value.scalar;
     Vector3 vect = Vector3(this->vector.x - value.vector.x,
                          this->vector.y - value.vector.y,
@@ -91,39 +91,38 @@ void Quateronion::operator*=(const Quateronion & value){
 }
 
 Quateronion Quateronion::operator*(const Quateronion & value)const {
-    float scalar= scalar * value.scalar - vector.dot(value.vector);
-    Vector3 imaginary = value.vector * scalar + vector * value.scalar + vector.cross(value.vector);
+    float scalar= this->scalar * value.scalar - vector.dot(value.vector);
+    Vector3 imaginary = value.vector * this->scalar + vector * value.scalar + vector.cross(value.vector);
     return Quateronion(scalar, imaginary);
 }
 
 Quateronion Quateronion::multiply(const Quateronion &value) const {
-    float scalar = scalar * value.scalar - vector.dot(value.vector);
-    Vector3 imaginary = value.vector * scalar + vector * value.scalar + vector.cross(value.vector);
+    float scalar = this->scalar * value.scalar - vector.dot(value.vector);
+    Vector3 imaginary = value.vector * this->scalar + vector * value.scalar + vector.cross(value.vector);
     return Quateronion(scalar, imaginary);
 }
 
 void Quateronion::operator*=(const float value){
-    scalar*= value;
+    scalar *= value;
     vector *= value;
 }
 
 Quateronion Quateronion::operator*(const float value)const{
-    float scalar = scalar * value;
+    float scalar = this->scalar * value;
     Vector3 imaginary = vector * value;
 
     return Quateronion(scalar,imaginary);
 }
 
 float Quateronion::norm(){
-    float scalar = scalar * scalar;
-    float imaginary = vector * vector;
+    float scalar = this->scalar * this->scalar;
+    float imaginary = this->vector * this->vector;
 
     return sqrt(scalar * imaginary);
 }
 
 void Quateronion::convertToUnitNorm(){
     float angle = DegToRad(scalar);
-    vector.normalize();
     scalar=cosf(angle*0.5);
     vector=vector * sinf(angle*0.5);
 }
@@ -137,7 +136,7 @@ void Quateronion::normalize(){
 }
 
 Quateronion Quateronion::conjugate() {
-    float scalar = scalar;
+    float scalar = this->scalar;
     Vector3 imaginary = vector * (-1);
 
     return Quateronion(scalar, imaginary);
@@ -148,10 +147,10 @@ Quateronion Quateronion::inverse(){
     absoluteValue *= absoluteValue;
     absoluteValue = 1/absoluteValue;
 
-    Quateronion conjugateValue = conjugate();
-
+    Quateronion conjugateValue = this->conjugate();
     float scalar=conjugateValue.scalar * absoluteValue;
     Vector3 imaginary = conjugateValue.vector * absoluteValue;
+
 
     return Quateronion(scalar, imaginary);
 }

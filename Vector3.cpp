@@ -119,18 +119,22 @@ Vector3 Vector3::cross(const Vector3 & value)const{
 Vector3 Vector3::rotateVector(float angle, Vector3 & input){
     Quateronion p(0,(*this));
 
-    input.normalize();
+    p.normalize();
 
     Quateronion q(angle,input);
 
     q.convertToUnitNorm();
 
-    Quateronion qInverse=q.inverse();
+    Quateronion qInverse=q.conjugate();
 
     Quateronion rotatedVector = q*p*qInverse;
 
     return rotatedVector.vector;
 }
+
+void Vector3::display(){
+    std::cout << "x : " << x << " y : " << y << " z : " << z << std::endl;
+};
 
 #pragma mark-destructors
 Vector3::~Vector3(){};

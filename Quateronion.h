@@ -38,13 +38,13 @@ public:
 
     void operator+=(const Quateronion & value);
 
-    Quateronion operator+(const Quateronion & value);
+    Quateronion operator+(const Quateronion & value) const;
 
 #pragma operators substract
 
     void operator-=(const Quateronion & value);
 
-    Quateronion operator-(const Quateronion & value);
+    Quateronion operator-(const Quateronion & value) const;
 
 #pragma operators mutliply
     void operator*=(const Quateronion & value);

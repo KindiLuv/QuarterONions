@@ -9,10 +9,8 @@ link_directories(${OPENGL_gl_LIBRARY})
 include_directories(./libs/glfw/include)
 include_directories(./libs/glew/include)
 
-link_directories(
-        ./libs/glfw/lib-static-ucrt,
-        ./libs/glew/lib/Release/x64
-)
+link_directories(./libs/glfw/lib-static-ucrt)
+link_directories(./libs/glew/lib/Release/x64)
 
 add_executable(QuarterONions main.cpp ./common/GLShader.cpp Quateronion.cpp Quateronion.h Vector3.cpp Vector3.h)
 

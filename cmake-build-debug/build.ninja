@@ -100,7 +100,7 @@ build CMakeFiles/QuarterONions.dir/Vector3.cpp.obj: CXX_COMPILER__QuarterONions_
 build QuarterONions.exe: CXX_EXECUTABLE_LINKER__QuarterONions_Debug CMakeFiles/QuarterONions.dir/main.cpp.obj CMakeFiles/QuarterONions.dir/common/GLShader.cpp.obj CMakeFiles/QuarterONions.dir/Quateronion.cpp.obj CMakeFiles/QuarterONions.dir/Vector3.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lglfw3  -lopengl32  -lglew32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  LINK_PATH = -LC:/Users/Pocky/Documents/Projy/QuarterONions/opengl32   -LC:/Users/Pocky/Documents/Projy/QuarterONions/./libs/glfw/lib-static-ucrt,   -LC:/Users/Pocky/Documents/Projy/QuarterONions/./libs/glew/lib/Release/x64
+  LINK_PATH = -LC:/Users/Pocky/Documents/Projy/QuarterONions/opengl32   -LC:/Users/Pocky/Documents/Projy/QuarterONions/./libs/glfw/lib-static-ucrt   -LC:/Users/Pocky/Documents/Projy/QuarterONions/./libs/glew/lib/Release/x64
   OBJECT_DIR = CMakeFiles\QuarterONions.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

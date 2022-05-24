@@ -54,7 +54,7 @@ public:
 #pragma operators scalar multiply
     Quateronion multiply(const Quateronion & value) const;
 
-    float operator*=(const float value);
+    void operator*=(const float value);
 
     Quateronion operator*(const float value)const;
 

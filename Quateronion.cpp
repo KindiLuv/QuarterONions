@@ -11,7 +11,9 @@
  * @param uS
  * @param uV
  */
-Quateronion::Quateronion(float uS, Vector3 & uV) : scalar(uS), vector(uV) {}
+Quateronion::Quateronion(float uS, Vector3 & uV) : scalar(uS), vector(uV) {};
+
+Quateronion::~Quateronion() {};
 
 /**
  * Constructor by copy
@@ -100,7 +102,7 @@ Quateronion Quateronion::multiply(const Quateronion &value) const {
     return Quateronion(scalar, imaginary);
 }
 
-float Quateronion::operator*=(const float value){
+void Quateronion::operator*=(const float value){
     scalar*= value;
     vector *= value;
 }

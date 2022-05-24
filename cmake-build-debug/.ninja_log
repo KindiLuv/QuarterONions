@@ -1,0 +1,7 @@
+# ninja log v5
+55	955	6751124474401946	CMakeFiles/QuarterONions.dir/Vector3.cpp.obj	7919f0ee70afa574
+51	959	6751124474431880	CMakeFiles/QuarterONions.dir/Quateronion.cpp.obj	b55d8c6783997909
+1	960	6751124474421898	CMakeFiles/QuarterONions.dir/common/GLShader.cpp.obj	42ff485bdc725b56
+3	535	6751131669188563	CMakeFiles/QuarterONions.dir/main.cpp.obj	99df71e4d64799d
+4	662	6751135167305883	CMakeFiles/QuarterONions.dir/Quateronion.cpp.obj	b55d8c6783997909
+662	828	6751135168868014	QuarterONions.exe	389aed065ebdd915
